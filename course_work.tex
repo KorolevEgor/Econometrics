@@ -1,0 +1,114 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{cmap}
+\usepackage{xfrac}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\makeatletter
+\renewcommand{\@biblabel}[1]{#1.} % Заменяем библиографию с квадратных скобок на точку:
+\makeatother
+
+\usepackage{geometry} % Меняем поля страницы
+\geometry{left=2cm}% левое поле
+\geometry{right=1.5cm}% правое поле
+\geometry{top=1cm}% верхнее поле
+\geometry{bottom=2cm}% нижнее поле
+
+\renewcommand{\theenumi}{\arabic{enumi}}% Меняем везде перечисления на цифра.цифра
+\renewcommand{\labelenumi}{\arabic{enumi}}% Меняем везде перечисления на цифра.цифра
+\renewcommand{\theenumii}{.\arabic{enumii}}% Меняем везде перечисления на цифра.цифра
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}% Меняем везде перечисления на цифра.цифра
+\renewcommand{\theenumiii}{.\arabic{enumiii}}% Меняем везде перечисления на цифра.цифра
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}% Меняем везде перечисления на цифра.цифра
+
+\newcommand{\imgh}[3]{\begin{figure}[h]\center{\includegraphics[width=#1]{#2}}\caption{#3}\label{ris:#2}\end{figure}}
+
+
+
+\begin{document}
+\newpage
+
+\begin{center}
+    \large
+    Московский авиационный институт \\
+    национальный исследовательский университет\\
+\end{center}
+
+\vspace{8em}
+
+\begin{center}
+    \Large
+    Факультет информационных технологий и прикладной математики\\
+    Кафедра компьютерных методов в математическом моделировании сложных систем \\ 
+\end{center}
+
+\vspace{2em}
+
+\begin{center}
+    \textsc{\textbf{Курсовая работа по Эконометрике \linebreak на тему: \linebreak регрессионный анализ}}
+\end{center}
+
+\vspace{20em}
+
+
+
+\newbox{\lbox}
+\savebox{\lbox}{\hbox{Королев Егор Владимирович}}
+\newlength{\maxl}
+\setlength{\maxl}{\wd\lbox}
+\hfill\parbox{11cm}{
+    \hspace*{5cm}\hspace*{-5cm}Студент:\hfill\hbox to\maxl{Королев Егор Владимирович\hfill}\\
+    \hspace*{5cm}\hspace*{-5cm}Преподаватель:\hfill\hbox to\maxl{Платонов Евгений Николаевич}\\
+    \hspace*{5cm}\hspace*{-5cm}Группа:\hfill\hbox to\maxl{М8О-401Б-18}\\
+}
+
+
+\vspace{\fill}
+
+\begin{center}
+    Москва, 2021
+\end{center}
+
+
+\newpage
+\tableofcontents
+\newpage
+\normalsize
+
+
+\section{Задание}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Байесовская регрессия}
+Байесовская регрессия\\
+
+\section{Практическая часть}
+
+\subsection{Модельная часть}
+
+\subsection{Метод наименьших квадратов}
+
+\subsection{Полиномиальная регрессия}
+
+\subsection{Регрессия для наблюдений с выбросами}
+
+\subsection{Квантильная регрессия}
+
+
+\end{document}}
