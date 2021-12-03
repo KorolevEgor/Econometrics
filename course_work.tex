@@ -5,7 +5,8 @@
 \usepackage[T2A]{fontenc}
 \usepackage[russian]{babel}
 \usepackage{graphicx}
-
+\usepackage{wrapfig}  % обтекание картинок текстом
+\usepackage{minted}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 
@@ -94,7 +95,7 @@
 
 Смоделировать данные:
 $$ X_k = f(h_k) + \varepsilon_k ,~~k=\overline{1,60}, $$
-где $f(h) = 1.5h - 2 - \frac{1}{2h}$, $\varepsilon_k$ -- независимый случайные величины с распределением $\mathcal{N}(0,\sigma^2)$.\\
+где $f(h) = 1.5h - 2 - \frac{1}{2h}$, $h\in [0.1;2]$, $\varepsilon_k$ -- независимый случайные величины с распределением $\mathcal{N}(0,\sigma^2)$.\\
 Точки внутри носителя для h выбираются равномерно.\\
 Смоделировать тестовую выборку объема 40, половина значений правее наблюдаемых значений, половина левее\\
 
@@ -184,9 +185,18 @@ $$ X = \sum\limits_{i=0}^p \theta_i h^i $$
 
 \subsection{Модельная часть}
 
-Для заданной функции 
+\begin{wrapfigure}{r}{0.45\linewidth} 
+    \vspace{-4ex}
+    \includegraphics[width=\linewidth]{src/img/сгенерированная_выборка.png}
+    \caption{Обучающая и валидационная выборки}
+\end{wrapfigure}
+
+Для заданной функции $f(h) = 1.5h - 2 - \frac{1}{2h}$ смоделируем обучающую выборку $f(h_k) + \varepsilon_k$. Точки $h_k$ выбраны равномерно на отрезке $[0.1;2]$, $к$ изменяется от $1$ до $60$. Аналогично смоделируем тестовую выборку с количеством наблюдений равным $40$. В качетсве параметров нормального распределения ошибок $\varepsilon$ было выбрано: $\mu=0, \sigma = 1$.
 
 \subsection{Метод наименьших квадратов}
+
+
+
 
 \subsection{Полиномиальная регрессия}
 
